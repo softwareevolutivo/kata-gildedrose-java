@@ -12,7 +12,7 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.6.2'
 }
 
-group = 'com.gildedrose'
+group = 'ec.com.softwareevolutivo.gildedrose'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
@@ -21,7 +21,7 @@ test {
 }
 
 task texttest(type: JavaExec) {
-    main = "com.gildedrose.TexttestFixture"
+    main = "ec.com.softwareevolutivo.gildedrose.TexttestFixture"
     classpath = sourceSets.test.runtimeClasspath
     args "30"
 }
