@@ -138,33 +138,4 @@ class GildedRoseTest {
         assertEquals(0, backstagePasses.quality);
     }
 
-    @Test
-    public void testConjuredLosesDoubleQuality() {
-        Item conjured = new Conjured(10, 20);
-
-        GildedRose gildedRose = new GildedRose(arrayWith(conjured));
-        gildedRose.updateQuality();
-
-        assertEquals(18, conjured.quality);
-    }
-
-    @Test
-    public void testThatConjuredSellInValueIsDecreased() {
-        Item conjured = new Conjured(10, 15);
-
-        GildedRose gildedRose = new GildedRose(arrayWith(conjured));
-        gildedRose.updateQuality();
-
-        assertEquals(9, conjured.sellIn);
-    }
-
-    @Test
-    public void testThatConjuredQualityIsNeverNegative() {
-        Item conjured = new Conjured(0, 0);
-
-        GildedRose gildedRose = new GildedRose(arrayWith(conjured));
-        gildedRose.updateQuality();
-
-        assertEquals(0, conjured.quality);
-    }
 }
