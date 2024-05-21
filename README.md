@@ -9,5 +9,5 @@
 ## Run tests with Maven from Command-Line
 
 ```
-./mvnw verify
+./mvnw test
 ```

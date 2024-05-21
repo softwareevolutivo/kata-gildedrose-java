@@ -1,6 +1,6 @@
 package ec.com.softwareevolutivo.gildedrose;
 
-public class Item {
+abstract class Item {
 
     public String name;
 
@@ -18,4 +18,7 @@ public class Item {
    public String toString() {
         return this.name + ", " + this.sellIn + ", " + this.quality;
     }
+
+    public abstract void updateQuality();
+
 }
