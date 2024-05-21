@@ -8,12 +8,13 @@ public class AgedBrie extends Item{
 
     @Override
     public void updateQuality(){
-        if (this.quality < 50) {
-            this.quality++;
-        }
-        this.sellIn--;
-        if (this.sellIn < 0 && this.quality < 50) {
-            this.quality++;
+
+        decreaseSellIn();
+
+        increaseQuality();
+
+        if (this.sellIn < 0) {
+            increaseQuality();
         }
     }
 

@@ -8,12 +8,13 @@ public class DefaultItem extends Item{
 
     @Override
     public void updateQuality() {
-        if (this.quality > 0) {
-            this.quality--;
+
+        decreaseSellIn();
+        decreaseQuality();
+
+        if (this.sellIn < 0) {
+            decreaseQuality();
         }
-        this.sellIn--;
-        if (this.sellIn < 0 && this.quality > 0) {
-            this.quality--;
-        }
+
     }
 }

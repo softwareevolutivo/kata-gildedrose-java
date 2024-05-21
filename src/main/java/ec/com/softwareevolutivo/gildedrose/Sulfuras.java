@@ -8,6 +8,6 @@ public class Sulfuras extends Item{
 
     @Override
     public void updateQuality() {
-        // no cambia
+        // does not change
     }
 }
